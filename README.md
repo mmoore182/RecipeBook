@@ -29,3 +29,5 @@ the Add Procedure button.  Procedures will auto-sort by the step #.
 
 To remove a procedure, select the procedure from the procedure table and press the Remove
 Procedure button.
+
+![](usagegif.gif)
