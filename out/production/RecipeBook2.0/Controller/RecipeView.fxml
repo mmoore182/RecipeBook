@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RecipeController">
+   <children>
+      <TableView fx:id="recipeTable" prefHeight="432.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="46.0" text="ID" />
+          <TableColumn fx:id="recipeColumn" prefWidth="153.0" text="Recipe" />
+        </columns>
+      </TableView>
+      <TableView fx:id="ingredientTable" layoutX="206.0" prefHeight="432.0" prefWidth="224.0">
+        <columns>
+          <TableColumn fx:id="ingredientColumn" prefWidth="146.0" text="Ingredient" />
+          <TableColumn fx:id="amountColumn" prefWidth="77.0" text="#" />
+        </columns>
+      </TableView>
+      <TableView fx:id="procedureTable" layoutX="434.0" prefHeight="432.0" prefWidth="361.0">
+        <columns>
+          <TableColumn fx:id="procedureStepColumn" prefWidth="75.0" text="Step" />
+          <TableColumn fx:id="procedureColumn" prefWidth="285.0" text="Procedure" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtRecipe" layoutX="67.0" layoutY="441.0" prefHeight="25.0" prefWidth="124.0" promptText="Recipe Name" />
+      <Label layoutX="9.0" layoutY="445.0" prefHeight="17.0" prefWidth="43.0" text="Recipe">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="9.0" layoutY="518.0" mnemonicParsing="false" onAction="#insertRecipe" text="Add" />
+      <TextField fx:id="txtIngredient" layoutX="206.0" layoutY="456.0" prefHeight="25.0" prefWidth="140.0" promptText="Ingredient" />
+      <TextField fx:id="txtIngredientAmt" layoutX="353.0" layoutY="456.0" prefHeight="25.0" prefWidth="77.0" promptText="Amount" />
+      <Label layoutX="206.0" layoutY="435.0" text="Ingredient">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="435.0" text="Amount">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="206.0" layoutY="491.0" mnemonicParsing="false" onAction="#insertIngredient" text="Add Ingredient" />
+      <TextArea fx:id="txtProcedure" layoutX="434.0" layoutY="442.0" prefHeight="117.0" prefWidth="361.0" promptText="Enter Procedure" />
+      <Button layoutX="495.0" layoutY="567.0" mnemonicParsing="false" onAction="#insertProcedure" text="Add Procedure" />
+      <Label layoutX="9.0" layoutY="484.0" prefHeight="18.0" prefWidth="62.0" text="Recipe ID">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRecipeID" layoutX="81.0" layoutY="481.0" prefHeight="25.0" prefWidth="108.0" promptText="Recipe ID" />
+      <Button layoutX="61.0" layoutY="518.0" mnemonicParsing="false" onAction="#updateRecipe" text="Update" />
+      <Button layoutX="129.0" layoutY="518.0" mnemonicParsing="false" onAction="#deleteRecipe" text="Delete" />
+      <Button layoutX="317.0" layoutY="492.0" mnemonicParsing="false" onAction="#deleteIngredient" text="Remove" />
+      <TextField fx:id="txtStep" layoutX="434.0" layoutY="567.0" prefHeight="25.0" prefWidth="51.0" promptText="Step #" />
+      <Button layoutX="669.0" layoutY="567.0" mnemonicParsing="false" onAction="#deleteProcedure" text="Remove Procedure" />
+   </children>
+</AnchorPane>

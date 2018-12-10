@@ -1,0 +1,54 @@
+.root{
+  -fx-background-color: #d5ecd0;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+  -fx-background-color:  #457313;
+}
+
+
+.table-view .column-header .label {
+  -fx-font-size: 14pt;
+  -fx-font-family: "Tahoma";
+  -fx-text-fill: #d9ffdb;
+  -fx-alignment: center-left;
+  -fx-opacity: 1;
+}
+
+.table-row-cell:selected {
+  -fx-background-color: #689852;
+  -fx-background-insets: 0;
+  -fx-background-radius: 1;
+}
+
+.button {
+  -fx-background-color:
+      linear-gradient(#3e6711, #5d8c11);
+  -fx-background-radius: 6, 5;
+  -fx-background-insets: 0, 1;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+  -fx-text-fill: #b9e7ad;
+}
+.button:hover {
+  -fx-background-color:
+      linear-gradient(#29470f, #395e11);
+  -fx-background-radius: 6, 5;
+  -fx-background-insets: 0, 1;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+  -fx-text-fill: #b9e7ad;
+}
+.text-field{
+  -fx-background-color: #dcffe0;
+  -fx-border-color: #3e6711;
+  -fx-prompt-text-fill: #689852;
+}
+
+.text-area{
+  -fx-background-color: #b7ff99;
+  -fx-border-color: #3e6711;
+}
+
+.text-area .content {
+  -fx-background-color: #dcffe0;
+}
