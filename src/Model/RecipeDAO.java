@@ -98,6 +98,8 @@ public class RecipeDAO {
   public static ObservableList<Recipe> getAllRecipes() throws SQLException, ClassNotFoundException {
     String sql = "select * from recipetbl";
     try {
+      DBUtil.dbExecuteQuery(
+          "create table if not exists recipetbl (ID int, recipeName varchar(50))");
       ResultSet resSet = DBUtil.dbExecute(sql);
       ObservableList<Recipe> recList = getRecipeObjects(resSet);
       return recList;
