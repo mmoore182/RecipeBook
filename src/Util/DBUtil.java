@@ -9,12 +9,14 @@ import java.sql.Statement;
 
 public class DBUtil {
 
-  private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+  private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  /** JDBC DRIVER. **/
   private static Connection connection = null;
+  // SQL DB URL Should not be changed.
   private static final String DB_URL =
-      "jdbc:mysql://localhost:3306/recipedb?autoReconnect=true&useSSL=false";
-  private static final String USER = "root";
-  private static final String PASS = "password";
+      "jdbc:mysql://localhost:3306/recipedb?autoReconnect=true&"
+          + "useSSL=false&createDatabaseIfNotExist=true";
+  private static final String USER = "root";       /** SQL USERNAME. **/
+  private static final String PASS = "password";   /** SQL PASSWORD. **/
 
   /**
    * Opens DB connection using JDBC driver.
@@ -28,7 +30,6 @@ public class DBUtil {
       throw e;
     }
     System.out.println("JDBC Driver connected");
-
     try {
       connection = DriverManager.getConnection(DB_URL, USER, PASS);
     } catch (SQLException e) {
@@ -64,7 +65,7 @@ public class DBUtil {
         System.out.println("Connection is null");
       }
     } catch (SQLException e) {
-      System.out.println("Problem occured at dbExecuteQuery" + e);
+      System.out.println("Problem executing dbExecuteQuery" + e);
       throw e;
     } finally {
       if (stmt != null) {
